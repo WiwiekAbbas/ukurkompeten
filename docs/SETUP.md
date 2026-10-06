@@ -206,3 +206,75 @@ Provider rekomendasi:
 2. **Add domain**: `ukurkompeten.id`
 
 3. **Setup DNS records** di domain provider:
+   Type Name Value TTL
+A @ 76.76.21.21 Auto
+A @ 76.76.21.22 Auto
+CNAME www cname.vercel-dns.com Auto
+
+
+4. **Wait 5-10 menit** untuk propagasi
+
+5. **Done!** Domain aktif dengan HTTPS otomatis
+
+---
+
+## STEP 7: TESTING
+
+### Test Registration
+
+1. Buka http://localhost:3000/register
+2. Isi form registration
+3. Submit
+4. Harusnya redirect ke /dashboard
+
+### Test Assessment
+
+1. Login dengan akun yang baru dibuat
+2. Pilih Modul 1
+3. Kerjakan beberapa pertanyaan
+4. Submit
+5. Lihat hasil
+
+---
+
+## TROUBLESHOOTING
+
+### Backend tidak bisa connect ke database
+
+- Check DATABASE_URL format
+- Pastikan password benar
+- Check firewall Supabase (Settings → Database → Connection pooling)
+
+### Frontend error "Failed to fetch"
+
+- Check NEXT_PUBLIC_API_URL benar
+- Pastikan backend running di port 8000
+- Check CORS settings di backend
+
+### Database tables tidak ada
+
+- Execute schema.sql di Supabase SQL Editor
+- Check apakah ada error syntax
+
+---
+
+## NEXT STEPS
+
+Setelah setup berhasil:
+
+1. **Add assessment questions** (100+ questions untuk Modul 1)
+2. **Setup payment gateway** (Midtrans)
+3. **Setup email service** (Resend)
+4. **Implement scoring logic** (Holland Code, Big Five)
+5. **Create PDF report generation**
+6. **Add more modules** (Modul 2-5)
+
+---
+
+## SUPPORT
+
+Kalau ada masalah:
+- Check dokumentasi: https://ukurkompeten.id/docs
+- Email: support@ukurkompeten.id
+- GitHub Issues: https://github.com/yourusername/ukurkompeten/issues
+
