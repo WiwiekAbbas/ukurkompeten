@@ -21,7 +21,7 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000)
+5. Open [http://localhost:3030](http://localhost:3030)
 
 ## Deployment
 
